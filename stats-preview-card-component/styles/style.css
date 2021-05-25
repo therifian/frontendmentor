@@ -69,3 +69,37 @@ main {
     color: var(--stat-headings);
     font-size: .875rem;
 }
+
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row-reverse;
+        justify-content:center;
+    }
+    .image {
+        background-image: url("../images/image-header-desktop.jpg");
+        width: 540px;
+        height: 446px;
+        border-radius: 0 10px 10px 0;
+        max-width: 540px;
+    }
+    .card  {
+        border-radius: 10px 0 0 10px;
+        text-align: left;
+        padding: 75px 0 0 75px;
+        width: 50%;
+        max-width: 540px;
+    }
+    .title {
+        font-size: 1.75rem;
+        line-height: 1.375;
+    }
+    .content {
+        line-height: 1.75;
+    }
+    .stats {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        padding-top: 50px;
+    }
+}
