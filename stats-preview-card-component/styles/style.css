@@ -1,0 +1,71 @@
+:root {
+--main-background: hsl(233, 47%, 7%);
+--card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+body {
+    background-color: var(--main-background);
+    color: var(--main-paragraph);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 25px; 
+}
+.image {    
+    background-color: var(--accent);
+    background-image: url("../images/image-header-mobile.jpg");
+    background-blend-mode:multiply;
+    background-size: cover;
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 270px;
+    border-radius: 20px 20px 0 0;
+}
+.card {
+    background-color: var(--card-background);
+    padding: 40px 30px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+.title {
+    color: var(--main-heading);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.25;
+}
+.title-custom {
+    color: var(--accent);
+}
+.content {
+    line-height: 1.5;
+    padding-top: 25px;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stat {
+    padding: 20px 0;
+}
+.stat-number {
+    display: block;
+    color: var(--main-heading);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.stat-name {
+    display: block;
+    text-transform: uppercase;
+    color: var(--stat-headings);
+    font-size: .875rem;
+}
