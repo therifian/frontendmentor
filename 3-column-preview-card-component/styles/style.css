@@ -1,0 +1,79 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    background: var(--very-light-gray);
+    background-repeat: no-repeat;
+    color: var(--transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 90px;
+    width: 314px;
+    margin: 0 auto;
+}
+.card {
+    background: transparent;
+    padding: 0 39px;
+}
+.card:nth-child(1) {
+    border-radius: 10px 10px 0 0;
+    background: var(--bright-orange);
+}
+.card:nth-child(2) {
+    background: var(--dark-cyan);
+}
+.card:nth-child(3) {
+    border-radius: 0 0 10px 10px;
+    background: var(--very-dark-cyan);
+}
+.card img {
+    padding: 45px 0 35px;
+}
+.card h2 {
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.card p {
+    line-height: 2;
+    padding-top: 35px;
+}
+.btn {
+    display: inline-block;
+    background: var(--very-light-gray);
+    margin: 25px 0 50px;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 2px solid var(--very-light-gray);
+    transition: all .3s ease-in-out;
+}
+.card:nth-child(1) .btn {
+    color: var(--bright-orange);
+}
+.card:nth-child(2) .btn {
+    color: var(--dark-cyan);
+}
+.card:nth-child(3) .btn {
+    color: var(--very-dark-cyan);
+}
+.btn:hover {
+    color: var(--very-light-gray) m !important;
+    background: transparent;
+}
+
+
