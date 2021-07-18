@@ -84,11 +84,9 @@ a {
     background-size: 100% 100%;
 }
 .grid {
-     
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    
+    justify-content: space-around;
 }
 .card {
     width: 300px;
