@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ accordion card</title>
+  <link rel="shortcut icon" href="images/codage.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/fonts.css">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <section class="container">
+    <div class="header-img">
+      <img class="header-img__desktop" src="images/illustration-woman-online-desktop.svg" alt="illustration woman online">
+      <img class="header-img__mobile" src="images/illustration-woman-online-mobile.svg" alt="illustration woman online">
+      <div class="bg-pattern"></div>
+    </div>
+    <div class="content">
+      <h1 class="title">FAQ</h1>
+      <div class="group">
+        <h2 class="question">How many team members can I invite?</h2>
+        <p class="answer">
+          You can invite up to 2 additional users on the Free plan. 
+          There is no limit on team members for the Premium plan.
+        </p>
+      </div>
+      <div class="group">
+        <h2 class="question active">What is the maximum file upload size?</h2>
+        <p class="answer">
+          No more than 2GB. All files in your account must fit your allocated storage space.
+        </p>
+      </div>
+      <div class="group">
+        <h2 class="question">How do I reset my password?</h2>
+        <p class="answer">
+          Click "Forgot password" from the login page or "Change password" from your profile page.
+          A reset link will be emailed to you.
+        </p>
+      </div>
+      <div class="group">
+        <h2 class="question">Can I cancel my subscription?</h2>
+        <p class="answer">
+          Yes! Send us a message and we'll process your request no questions asked.
+        </p>
+      </div>
+      <div class="group">
+        <h2 class="question">Do you provide additional support?</h2>
+        <p class="answer">
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questions = document.getElementsByClassName('question')
+    
+    for (let i = 0; i < questions.length; i++) {
+     
+      questions[i].addEventListener('click', () => {
+        if (questions[i].classList.contains("active")) {
+          questions[i].className = "question"
+        } else {
+          questions[i].className = "question active"
+        }
+      })
+    }
+  </script>
+</body>
+</html>
