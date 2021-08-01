@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Spartan";
+    src: url("../fonts/Spartan-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("../fonts/Spartan-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("../fonts/Spartan-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
