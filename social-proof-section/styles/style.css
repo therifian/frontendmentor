@@ -89,6 +89,18 @@ body {
 .bottom-desktop {
     display: none;
 }
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--dark-magenta);
+}
+footer a {
+    color: var(--soft-pink);
+    text-decoration: none;
+}
 
 @media screen and (min-width: 768px){
     .container {

@@ -70,7 +70,7 @@ main {
     font-size: .875rem;
 }
 footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 25px;

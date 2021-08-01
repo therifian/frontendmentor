@@ -102,6 +102,20 @@ body {
     display: block;
 }
 
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--desaturated-blue);
+    font-size: 1.125rem;
+}
+footer a {
+    color: var(--soft-red);
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 992px)  {
     .container {
         width: 920px;

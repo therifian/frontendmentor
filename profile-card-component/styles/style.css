@@ -5,25 +5,26 @@
     --dark-gray: hsl(0, 0%, 59%);
 }
 body {
-    width: 375px;
     font-size: 18px;
     font-family: 'Kumbh Sans', sans-serif;
     background-color: var(--dark-cyan);
     height: 100vh;
-    overflow: hidden;
+}
+.container {
+    max-width: 375px;
 }
 a {
     text-decoration: none;
     color: var(--desaturated-blue);
 }
 .bg-top {
-    position: absolute;
+    position: fixed;
     width: 500px;
     left: -200px;
     top: -100px;
 }
 .bg-bottom {
-    position: absolute;
+    position: fixed;
     width: 500px;
     right: -300px;
     bottom: -100px;
@@ -77,11 +78,14 @@ a {
     padding-top: 5px;
 }
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 25px;
     left: 0;
     right: 0;
     text-align: center;
+}
+footer a {
+    color: white;
 }
 
 @media screen and (min-width: 768px){
