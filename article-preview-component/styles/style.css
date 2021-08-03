@@ -1,0 +1,192 @@
+:root {
+    --dark-blue: #48556a;
+    --desaturated-blue: #6d7f97;
+    --grayish-blue: #9eafc2;
+    --light-blue: #ecf2f8;
+}
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    height: 100vh;
+    font-weight: 500;
+    background: var(--light-blue);
+    color: var(--desaturated-blue);
+}
+.container {
+    width: 375px;
+    background: white;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+.title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--dark-blue);
+    line-height: 1.5;
+    padding: 40px 40px 15px;
+}
+.desc {
+    padding: 0 40px 40px;
+    line-height: 1.5;
+}
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.name {
+    color: var(--dark-blue);
+    font-weight: 700;
+    padding: 10px 0  10px 110px;
+}
+.date {
+    padding-left: 20px;
+    color: var(--grayish-blue);
+}
+#open, #close {
+    float: right;
+    border: none;
+    outline: none;
+    background: var(--light-blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 50px;
+    margin-top: -25px;
+    cursor: pointer;
+    background-image: url(../images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+}
+#share {
+    display: none;
+    width: 100%;
+    background: var(--dark-blue);
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+}
+#share.active{
+    display: block;
+}
+#share h2 {
+    float: left;
+    color: var(--grayish-blue);
+    padding-top: 30px;
+    padding-left: 40px;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 1rem;
+}
+.facebook, 
+.twitter, 
+.pinterest {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url(../images/icon-facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+    padding-top: 55px;
+    padding-left: 10px;
+}
+.facebook {
+    padding-left: 25px;
+}
+.twitter {
+    background-image: url(../images/icon-twitter.svg);
+}
+.pinterest {
+    background-image: url(../images/icon-pinterest.svg);
+}
+#close {
+    margin-top: 20px;
+    background: var(--desaturated-blue);
+    background-image: url(../images/icon-share-light.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+}
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--dark-blue);
+}
+footer a {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        height: 328px;
+        width: 768px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .image {
+        width: 728px;
+        overflow: hidden;
+        border-radius: 20px 0 0 20px;
+    }
+    .image img {
+        height: 328px;
+        width: auto;  
+        margin-left: -50px;  
+    }
+    #share {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        left: 555px;
+        bottom: 100px;
+    }
+    #share::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid var(--dark-blue);
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+    }
+    #share h2 {
+        padding-top: 18px;
+    }
+    #open {
+        margin-right: 43px;
+    }
+    #close {
+        margin-right: 130px;
+        margin-top: 24px;
+    }
+    .facebook, 
+    .twitter, 
+    .pinterest {
+        padding-top: 30px;
+    }
+}
