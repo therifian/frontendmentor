@@ -1,0 +1,149 @@
+:root {
+    --red: #ea5353;
+    --cyan: #45d3d3;
+    --orange: #fcaf4a;
+    --blue: #549ef2;
+    --dark-blue: #4c4e61;
+    --grayish-blue: #a3a5ae;
+    --light-blue: #fafafa;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-blue);
+}
+.container {
+    max-width: 375px;
+    padding: 50px 20px;
+}
+.subtitle {
+    color: var(--grayish-blue);
+    font-weight: 200;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+}
+.title {
+    color: var(--dark-blue);
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+}
+.desc {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--grayish-blue);
+    line-height: 1.4;
+    padding-bottom: 50px;
+    font-weight: 200;
+}
+.card {
+    background: white;
+    margin: 20px 0;
+    border-radius: 5px;
+    border-top: 4px solid var(--cyan);
+    position: relative;
+    height: 250px;
+    padding-left: 25px;
+    padding-top: 30px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 5%), 0 6px 6px rgb(0 0 0 / 10%);
+}
+.card.team-builder {
+    border-color: var(--red);
+}
+.card.karma {
+    border-color: var(--orange);
+}
+.card.calculator {
+    border-color: var(--blue);
+}
+.card__title {
+    font-weight: 600;
+    color: var(--dark-blue);
+    padding-bottom: 15px;
+}
+.card__desc {
+    font-size: rem;
+    color: var(--grayish-blue);
+    line-height: 1.4;
+    font-weight: 200;
+}
+.icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    transform: scale(.8);
+}
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--dark-blue);
+    font-size: 1.125rem;
+}
+footer a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px)  {
+    body {
+        display: block;
+    }
+    .container {
+        min-width: 100%;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    .title {
+        font-size: 1.625rem;
+    }
+    .desc {
+        width: 35%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .card__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        flex-direction: row;
+    }
+    .card {
+        width: 350px;
+        margin: 10px;
+    }
+    
+}
+
+@media only screen and (min-width: 1150px) {
+    .container, 
+    .card__container {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .supervisor {
+        transform: translateY(50%);
+    }
+    .calculator {
+        order: 3;
+        transform: translateY(50%);
+    }
+    .karma {
+        order: 4;
+    }
+}
