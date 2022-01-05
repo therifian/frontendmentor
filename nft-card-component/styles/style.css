@@ -1,0 +1,172 @@
+:root {
+  --soft-blue: #8bacda;
+  --cyan: #00fff7;
+  --dark-blue-bg: #0d192b;
+  --dark-blue-card: #14253d;
+  --dark-blue-line: #2f415b;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-blue-bg);
+  color: var(--soft-blue);
+}
+
+.container {
+  max-width: 375px;
+  padding: 50px 20px;
+}
+
+.card {
+  background-color: var(--dark-blue-card);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay:hover .card-overlay {
+  opacity: 0.5;
+}
+
+.overlay:hover .card-icon {
+  opacity: 1;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  background: var(--cyan);
+  opacity: 0;
+}
+
+.card-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.card-content {
+  padding: 50px 10px 0;
+}
+
+.card-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: var(--cyan);
+}
+
+.card-desc {
+  padding: 20px 0;
+}
+
+.card-content-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  color: var(--cyan);
+  font-weight: bold;
+  position: relative;
+  margin-left: 15px;
+}
+
+.price::before {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 18px;
+  background: url(../images/icon-ethereum.svg);
+  left: -15px;
+}
+
+.date {
+  position: relative;
+}
+
+.date::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: url(../images/icon-clock.svg);
+  left: -20px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  margin-top: 15px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.card-footer::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--dark-blue-line);
+  top: 0;
+}
+
+.creater-img {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.creator-name span {
+  color: white;
+  cursor: pointer;
+}
+
+.creator-name span:hover {
+  color: var(--cyan);
+}
+
+footer {
+  position: fixed;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 1.125rem;
+}
+
+footer a {
+  color: var(--cyan);
+  text-decoration: none;
+}
