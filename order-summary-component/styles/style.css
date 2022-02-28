@@ -1,0 +1,157 @@
+:root {
+	--pale-blue:#e0e8ff;
+	--bright-blue: #3829e0;
+	--very-pale-blue: #f5f7ff;
+	--desaturated-blue: #7280a7;
+	--dark-blue: #1f2f56;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background: var(--pale-blue);
+	background-image: url(../images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	color: var(--desaturated-blue);
+	font-family: 'Red Hat Display', sans-serif;
+	background-size: contain;
+	font-size: 16px;
+	font-weight: 500;
+	min-height: 100vh;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 350px;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.219);
+}
+
+.header {
+	border-radius: 20px 20px 0 0 ;
+}
+
+.title {
+	color: var(--dark-blue);
+	font-size: 1.5rem;
+	font-weight: 900;
+	padding: 30px 0 20px;
+}
+
+.desc {
+	line-height: 1.5;
+	padding: 0 40px 20px;
+}
+
+.plan {
+	background-color: var(--very-pale-blue);
+	border-radius: 10px;
+	margin: 0 auto;
+	position: relative;
+	width: 300px;
+	height: 75px;
+}
+
+.icon {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+}
+
+.plan-title {
+	position: absolute;
+	left: 90px;
+	top: 17px;
+	font-weight: 700;
+	color: var(--dark-blue);
+}
+
+.price {
+	position: absolute;
+	left: 90px;
+	top: 40px;
+}
+
+.change {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--bright-blue);
+	text-decoration: underline;
+	transition: all .3s ease-in;
+}
+
+.change:hover {
+	text-decoration: none;
+	opacity: .7;
+}
+
+
+.succes-btn {
+	background-color: var(--bright-blue);
+	box-shadow: 0 1rem 1.125rem rgba(0, 0, 0, 0.137);
+	color: var(--very-pale-blue);
+	display: block;
+	padding: 15px 0;
+	margin: 25px auto 10px;
+	border-radius: 10px;
+	width: 300px;
+	transition: all .3s ease-in;
+}
+
+.succes-btn:hover {
+	opacity: .7;
+}
+
+.error-btn {
+	color: var(--desaturated-blue);
+	display: block;
+	padding: 15px 0;
+	margin: 0 auto;
+	border-radius: 10px;
+	width: 300px;
+	font-weight: 700;
+	transition: all .3s ease-in;
+}
+
+.error-btn:hover {
+	color: var(--dark-blue);
+}
+
+footer {
+	position: fixed;
+	bottom: 25px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: var(--dark-blue);
+	font-size: 1.125rem;
+}
+
+footer a {
+	color: var(--bright-blue);
+	text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+	body {
+		background-image: url(../images/pattern-background-desktop.svg);
+	}
+}
