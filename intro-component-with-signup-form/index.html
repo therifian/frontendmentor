@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intro component with sign-up form</title>
+	<link rel="shortcut icon" href="../assets/images/codage.ico" type="image/x-icon">
+	<link rel="stylesheet" href="styles/fonts.css">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+	<main>
+		<div class="container">
+			<div class="content">
+				<h1 class="title">Learn to code by watching others</h1>
+				<p class="desc">
+					See how exprienced developers solve problems in real-time.
+					Watching scripted tutorials is great, but understanding
+					how developers think is invaluable.
+				</p>
+			</div>
+			<div class="form">
+				<a href="#" class="btn-try">
+					<span>Try it free 7 days</span>
+					then $20/mo. thereafter
+				</a>
+				<form action="#" method="post" id="form">
+					<div class="form-group">
+						<input type="text" name="fistname" id="firstname" placeholder="First Name">
+						<img src="images/icon-error.svg" alt="error" class="error-icon">
+						<span class="error">First Name cannot be empy</span>
+					</div>
+					<div class="form-group">
+						<input type="text" name="name" id="lastname" placeholder="Last Name">
+						<img src="images/icon-error.svg" alt="error" class="error-icon">
+						<span class="error">Last Name cannot be empy</span>
+					</div>
+					<div class="form-group">
+						<input type="email" name="email" id="email" placeholder="Email Adress">
+						<img src="images/icon-error.svg" alt="error" class="error-icon">
+						<span class="error">Looks like this is not an email</span>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" id="password" placeholder="Password">
+						<img src="images/icon-error.svg" alt="error" class="error-icon">
+						<span class="error">Password cannot be empy</span>
+					</div>
+					<input class="btn-send" id="send" type="submit" value="Claim your free trial">
+					<span class="terms">By clicking the button, you are agreeing to our
+						<a href="#">Terms and Services</a>
+					</span>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		Challenge by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>.
+		Coded by <a href="https://www.frontendmentor.io/profile/therifian">TheRifian</a>.
+	</footer>
+
+	<script>
+		const inputs = document.querySelectorAll('input');
+		console.log(inputs);
+		const button = document.getElementById("send");
+		const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		button.addEventListener('click', (e) => {
+			e.preventDefault();
+			inputs.forEach((input) => {
+				if (input.type === 'submit') return;
+				if (!input.value) {
+					input.nextElementSibling.style.display = 'block';
+					input.nextElementSibling.nextElementSibling.style.display = 'block';
+				} else {
+					if (input.type === 'email') {
+						if (input.value.match(regex)) {
+							input.nextElementSibling.style.display = 'none';
+							input.nextElementSibling.nextElementSibling.style.display = 'none';
+						}
+					} else {
+						input.nextElementSibling.style.display = 'none';
+						input.nextElementSibling.nextElementSibling.style.display = 'none';
+					}
+				}
+			})
+		})
+
+	</script>
+
+</body>
+
+</html>
