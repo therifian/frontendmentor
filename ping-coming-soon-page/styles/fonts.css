@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/LibreFranklin-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/LibreFranklin-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/LibreFranklin-Bold.ttf") format("truetype");
+    font-weight: 700;
+}

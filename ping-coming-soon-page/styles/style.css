@@ -1,0 +1,155 @@
+:root {
+    --blue: #4f7df3;
+    --pale-blue: #c2d3ff;
+    --light-red: #ff5263;
+    --gray: #969696;
+    --very-dark-blue: #151f29;
+}  
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 300;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 375px;
+}
+.logo {
+    width: 60px;
+    margin-top: 100px;
+}
+.title {
+    color: var(--gray);
+    margin: 50px 0 20px;
+}
+.title strong {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+.notif {
+    font-size: .8rem;
+    color: var(--very-dark-blue);
+    margin-bottom: 25px;
+}
+.email, 
+.btn {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 25px;
+}
+.email {
+    border: 1px solid var(--pale-blue);
+    padding: 10px 25px;
+}
+.email::placeholder {
+    color: var(--pale-blue);
+}
+#error {
+    font-size: .75rem;
+    color: var(--light-red);
+    display: none;
+}
+.btn {
+    border: none;
+    color: #fff;
+    background-color: var(--blue);
+    font-weight: 600;
+    font-size: .75rem;
+    letter-spacing: .5px;
+    box-shadow: 0 3px 10px var(--blue);
+    padding: 15px 25px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn:hover {
+    opacity: .8;
+}
+.illustration {
+    padding: 100px 0;
+}
+.footer {
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+}
+.social {
+    padding-bottom: 25px;
+}
+ion-icon {
+    color: var(--blue);
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 8px;
+    border: 2px solid var(--pale-blue);
+    border-radius: 50%;
+    transition: all .3s ease-in;
+}
+ion-icon:hover {
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+.copyright {
+    font-size: .65rem;
+    color: var(--gray);
+}
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--very-dark-blue);
+    font-size: .8rem;
+}
+footer a {
+    color: var(--light-red);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 992px){
+    .container {
+        min-width: 960px;
+    }
+    .form {
+        display: flex;
+        width: 700px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 50px;
+    }
+    .email {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 65%;
+    }
+    #error {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+    .btn {
+        width: 30%;
+        margin: 0;
+    }
+    .illustration {
+        max-width: 700px;
+    }
+    .footer {
+        bottom: 50px;
+    }
+}
+
