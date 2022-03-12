@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,15 @@
   <title>FAQ accordion card</title>
   <link rel="shortcut icon" href="images/codage.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/fonts.css">
-	<link rel="stylesheet" href="styles/reset.css">
-	<link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-  <section class="container">
+  <main class="container">
     <div class="header-img">
-      <img class="header-img__desktop" src="images/illustration-woman-online-desktop.svg" alt="illustration woman online">
+      <img class="header-img__desktop" src="images/illustration-woman-online-desktop.svg"
+        alt="illustration woman online">
       <img class="header-img__mobile" src="images/illustration-woman-online-mobile.svg" alt="illustration woman online">
       <div class="bg-pattern"></div>
     </div>
@@ -22,7 +25,7 @@
       <div class="group">
         <h2 class="question">How many team members can I invite?</h2>
         <p class="answer">
-          You can invite up to 2 additional users on the Free plan. 
+          You can invite up to 2 additional users on the Free plan.
           There is no limit on team members for the Premium plan.
         </p>
       </div>
@@ -52,19 +55,19 @@
         </p>
       </div>
     </div>
-  </div>
-</section>
+    </div>
+  </main>
 
   <footer>
-    Challenge by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/therifian">TheRifian</a>.
   </footer>
 
   <script>
     const questions = document.getElementsByClassName('question')
-    
+
     for (let i = 0; i < questions.length; i++) {
-     
+
       questions[i].addEventListener('click', () => {
         if (questions[i].classList.contains("active")) {
           questions[i].className = "question"
@@ -75,4 +78,5 @@
     }
   </script>
 </body>
+
 </html>
