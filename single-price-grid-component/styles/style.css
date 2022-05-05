@@ -24,7 +24,7 @@ body {
     padding: 40px 30px 10px;
     border-radius: 5px 5px 0 0;
 }
-.top h2 {
+.top h1 {
     color: var(--cyan);
     font-weight: bold;
     font-size: 1.25rem;
