@@ -1,0 +1,176 @@
+:root {
+    --violet: #674baf;
+    --soft-magenta: #e882e8;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: var(--violet);
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    color: #fff;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+header {
+    width: 45%;
+    height: auto;
+}
+header img {
+    height: 45px;
+}
+header, main {
+    padding: 20px 20px 0;
+}
+.illustration {
+    max-width: 375px;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 55px;
+    display: block;
+}
+.container {
+    width: 100%;
+    border-radius: 10px;
+}
+.title {
+    font-weight: 600;
+    padding: 60px 20px 20px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+.desc {
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 15px;
+    color: rgb(174, 174, 174);
+}
+.btn {
+    display: block;
+    text-align: center;
+    width: 60%;
+    margin: 30px auto 80px;
+    background-color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: .8rem;
+    transition: all .3s ease-in;
+}
+.btn:hover {
+    background-color: var(--soft-magenta);
+    color: #fff;
+}
+.social {
+    width: 100%;
+    text-align: center;
+}
+.link {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    transition: all .3s ease-in;
+    margin: 0 2px;
+}
+.link:hover {
+    border-color: var(--soft-magenta);
+}
+.link img{
+    color: #fff;
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    filter: invert(100%) sepia(3%) saturate(7484%) hue-rotate(208deg) brightness(100%) contrast(109%);
+}
+.link:hover img {
+    filter: invert(81%) sepia(32%) saturate(2651%) hue-rotate(257deg) brightness(97%) contrast(86%);
+}
+.link:nth-child(2) img {
+    top: 4px;
+    left: 4px;
+}
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+}
+footer a {
+    color: var(--soft-magenta);
+    text-decoration: none;
+}
+@media screen and (min-width: 900px){
+    body {
+        background-image: url('../images/bg-desktop.svg');
+        background-size: cover;
+    }
+    header, main {
+        padding-left: 50px;
+    }
+    header {
+        padding-top: 50px;
+        width: 100%;
+    }
+    header img {
+        max-height: 40px;
+        width: auto;
+    }
+    .container {
+        min-width: 800px;
+        width: 100%;
+        display: flex;
+        padding-top: 100px;
+    }
+    .illustration, .content {
+        width: 50%;
+    }
+    .illustration {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+    .illustration img {
+        max-width: 800px;
+    }
+    .content {
+        padding-left: 60px;
+        padding-top: 50px;
+    }
+    .title, .desc {
+        text-align: left;
+        padding-left: 0;
+        max-width: 550px;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .btn {
+        margin: 30px 0 0 0; 
+        padding: 15px 0;
+        width: 300px;
+    }
+    .social {
+        width: fit-content;
+        position: absolute;
+        right: 50px;
+        bottom: 80px;
+    }
+}
+
