@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interactive rating component</title>
+	<link rel="shortcut icon" href="../assets/images/codage.ico" type="image/x-icon">
+	<link rel="stylesheet" href="styles/fonts.css">
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+	<main>
+    <div class="container">
+      <div class="card" id="card">
+        <span class="star">
+          <img src="images/icon-star.svg" alt="Star Icon">
+        </span>
+        <h1 class="title">How did we do?</h1>
+        <p class="info">
+          Please let us know how we did with your support
+          request. All feedback is appreciated to help 
+          us improve our offering!
+        </p>
+        <div class="rates" id="rates">
+          <span class="rate">1</span>
+          <span class="rate">2</span>
+          <span class="rate">3</span>
+          <span class="rate">4</span>
+          <span class="rate">5</span>
+        </div>
+        <button class="btn" id="submit">Submit</button>
+      </div>
+      <div class="response" id="response">
+        <img src="images/illustration-thank-you.svg" alt="Thank you illustration">
+        <h3 class="selected">You selected <span id="note"></span> out of 5</h3>
+        <h2 class="thanks">Thank you</h2>
+        <p class="info">
+          We appreciate you taking the time to give a rating.
+          If you ever need more support, don't hesitate 
+          to get in touch!
+        </p>
+      </div>
+    </div>
+	</main>
+
+	<footer>
+		Challenge by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>.
+		Coded by <a href="https://www.frontendmentor.io/profile/therifian">TheRifian</a>.
+	</footer>
+</body>
+</html>
