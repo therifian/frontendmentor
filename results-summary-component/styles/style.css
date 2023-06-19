@@ -1,0 +1,194 @@
+:root {
+    --primary-red: 255, 87, 87;
+    --primary-yellow: 255, 176, 31;
+    --primary-teal: 0, 189, 145;
+    --primary-blue: 17, 37, 212;
+
+    --gradient-slate-blue: hsl(252, 100%, 67%);
+    --gradient-royal-blue: hsl(241, 81%, 54%);
+
+    --gradient-violet-blue: hsla(256, 72%, 46%, 1);
+    --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-blue: hsl(221, 100%, 96%);
+    --neutral-lavender: hsl(241, 100%, 89%);
+    --neutral-dark-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    background: var(--neutral-blue);
+    color: var(--neutral-dark-blue);
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--neutral-white);
+    height: 100vh;
+}
+.result {
+    background: linear-gradient(to bottom, var(--gradient-slate-blue), var(--gradient-royal-blue));
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    padding: 20px 0;
+}
+.result h3 {
+    color: var(--neutral-lavender);
+}
+.score {
+    background: linear-gradient(to top, var(--gradient-persian-blue), var(--gradient-violet-blue));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px auto;
+    color: var(--neutral-lavender);
+}
+.score span {
+    color: var(--neutral-white);
+    font-weight: 800;
+    display: block;
+    font-size: 3rem;
+    padding-top: 25px;
+    padding-bottom: 8px;
+}
+.result h2 {
+    color: var(--neutral-blue);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.result p {
+    width: 80%;
+    margin: 0 auto;
+    color: var(--neutral-lavender);
+    line-height: 1.2;
+}
+.summary {
+    padding: 30px;
+}
+.summary h3 {
+    color: var(--neutral-dark-blue);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.test {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    padding: 15px 0;
+    border-radius: 10px;
+    position: relative;
+}
+.test:nth-of-type(1) {
+    background: rgba(var(--primary-red), 0.1);
+}
+.test:nth-of-type(2) {
+    background: rgba(var(--primary-yellow), 0.1);
+}
+.test:nth-of-type(3) {
+    background: rgba(var(--primary-teal), 0.1);
+}
+.test:nth-of-type(4) {
+    background: rgba(var(--primary-blue), 0.1);
+}
+.test img {
+    padding: 0 20px;
+}
+.test h3 {
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+}
+.test:nth-of-type(1) h3 {
+    color: rgb(var(--primary-red));
+}
+.test:nth-of-type(2) h3 {
+    color: rgb(var(--primary-yellow));
+}
+.test:nth-of-type(3) h3 {
+    color: rgb(var(--primary-teal));
+}
+.test:nth-of-type(4) h3 {
+    color: rgb(var(--primary-blue));
+}
+.test p {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--neutral-lavender);
+}
+.test p span {
+    color: var(--neutral-dark-blue);
+}
+button {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: 800;
+    color: var(--neutral-white);
+    background-color: var(--neutral-dark-blue);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 1s ease-in;
+}
+button:hover {
+    background: linear-gradient(to bottom, var(--gradient-slate-blue), var(--gradient-royal-blue));
+}
+footer {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--neutral-dark-blue);
+}
+footer a {
+    color: rgb(var(--primary-blue));
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+    body {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+    .container {
+        max-width: 700px;
+        flex-direction: row;
+        width: 95%;  
+        height: fit-content;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .result {
+        border-radius: 20px;
+        width: 50%;
+    }
+    .score {
+        width: 200px;
+        height: 200px;
+    }
+    .score span {
+        font-size: 5rem;
+        padding-top: 50px;
+    }
+    .summary {
+        width: 50%;
+    }
+}
