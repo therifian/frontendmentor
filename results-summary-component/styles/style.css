@@ -39,7 +39,7 @@ body {
     border-radius: 0 0 20px 20px;
     padding: 20px 0;
 }
-.result h3 {
+.result h2 {
     color: var(--neutral-lavender);
 }
 .score {
@@ -73,7 +73,7 @@ body {
 .summary {
     padding: 30px;
 }
-.summary h3 {
+.summary h2 {
     color: var(--neutral-dark-blue);
     font-weight: 700;
     font-size: 1.25rem;
@@ -101,23 +101,23 @@ body {
 .test img {
     padding: 0 20px;
 }
-.test h3 {
+.test h2 {
     font-size: 1rem;
     position: absolute;
     top: 50%;
     left: 60px;
     transform: translateY(-50%);
 }
-.test:nth-of-type(1) h3 {
+.test:nth-of-type(1) h2 {
     color: rgb(var(--primary-red));
 }
-.test:nth-of-type(2) h3 {
+.test:nth-of-type(2) h2 {
     color: rgb(var(--primary-yellow));
 }
-.test:nth-of-type(3) h3 {
+.test:nth-of-type(3) h2 {
     color: rgb(var(--primary-teal));
 }
-.test:nth-of-type(4) h3 {
+.test:nth-of-type(4) h2 {
     color: rgb(var(--primary-blue));
 }
 .test p {
@@ -175,7 +175,7 @@ footer a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        box-shadow: 5px 20px 20px var(--neutral-blue);
+        box-shadow: 20px 30px 50px var(--neutral-blue);
     }
     .result {
         border-radius: 20px;
