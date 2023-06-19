@@ -17,7 +17,7 @@
 }
 
 body {
-    background: var(--neutral-blue);
+    background: var(--neutral-white);
     color: var(--neutral-dark-blue);
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
@@ -58,7 +58,7 @@ body {
     padding-top: 25px;
     padding-bottom: 8px;
 }
-.result h2 {
+.result h1 {
     color: var(--neutral-blue);
     font-weight: 800;
     font-size: 1.5rem;
@@ -155,7 +155,7 @@ footer {
     color: var(--neutral-dark-blue);
 }
 footer a {
-    color: rgb(var(--primary-blue));
+    color: rgb(var(--primary-red));
     text-decoration: none;
 }
 
@@ -175,6 +175,7 @@ footer a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        box-shadow: 5px 20px 20px var(--neutral-blue);
     }
     .result {
         border-radius: 20px;
