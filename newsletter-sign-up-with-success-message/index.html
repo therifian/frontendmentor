@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter sign-up form with success message</title>
+  <link rel="shortcut icon" href="../assets/images/codage.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/fonts.css">
+<link rel="stylesheet" href="styles/reset.css">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="container">
+	<div id="content-container" class="content-container">
+		<div class="img-container">
+			<img class="mobile-img" src="images/illustration-sign-up-mobile.svg" alt="Illustration">
+			<img class="desktop-img" src="images/illustration-sign-up-desktop.svg" alt="Illustration">
+		 </div>
+		 <div class="content">
+			<h1>Stay updated!</h1>
+			<p>
+				Join 60,000+ product managers
+				receiving monthly updates on:
+			</p>
+			<ul>
+				<li>Product discovery and building what matters</li>
+				<li>Measuring to ensure updates are a success</li>
+				<li>And much more!</li>
+			</ul>
+			<form>
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<span id="errorText">Valid email required</span>
+				</div>
+				<input type="email" id="email" placeholder="email@company.com">
+				<button id="submit">Subscribe to monthly newsletter</button>
+			</form>
+		</div>
+	</div>
+    <div id="popup">
+		<div class="success" id="success">
+			<img src="images/icon-success.svg" alt="Success Icon">
+			<h2>Thanks for subscribing!</h2>
+			<p>
+				A confirmation email has been sent to 
+				<b id="userEmail"></b>. Please open it and 
+				click the button inside to confirm
+				your subscription
+			</p>
+			<button id="dismiss">Dismiss message</button>
+		 </div>
+	</div>
+</main>
+
+  <footer>
+      Challenge by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/therifian">TheRifian</a>.
+  </footer>
+  <script>
+	const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+	const submitBtn = document.getElementById('submit');
+	const success = document.getElementById('success');
+	const dismissBtn = document.getElementById('dismiss');
+	const email = document.getElementById('email');
+	const errorText = document.getElementById('errorText');
+
+	const content = document.getElementById("content-container");
+	const popup = document.getElementById("popup");
+
+	email.addEventListener('input', e => {
+		email.classList.remove('error')
+		errorText.style.display = 'none'
+	})
+
+	submitBtn.addEventListener('click', e => {
+		e.preventDefault();
+		if (String(email.value).toLowerCase().match(regex)) {
+			email.value = "";
+			success.style.display = "block";
+			errorText.style.display = 'none'
+			email.classList.remove('error');
+			content.style.display = "none";
+		} else {
+			errorText.style.display = 'inline-block'
+			email.classList.add('error');
+		}
+	})
+	
+	dismissBtn.addEventListener('click', e => {
+		e.preventDefault();
+		success.style.display = "none";
+		content.style.display = "flex";
+	})
+  </script>
+</body>
+</html>
