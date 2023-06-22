@@ -213,6 +213,9 @@ footer a {
     footer {
         color: var(--white);
     }
+    footer a {
+        color: red;
+    }
 }
 
 
